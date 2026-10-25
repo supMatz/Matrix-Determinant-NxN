@@ -1,18 +1,9 @@
 #include <stdio.h>
 #define N 50
 
-/* Data una matrice n*n restituire il determinante della matrice
- *
- * esempio esecuzione :
- * Dimensione : 2
- * Matrice :   1 2 3 4
- *             3 4 4 4
- *             2 1 4 4
- *
- * Determinante = -2
- */
+/* Data una matrice n*n restituire il determinante della matrice */
 long det(int A[N][N], int n) {
-    int M[N][N];            /* spazio per il minore */
+    int M[N][N]; /* spazio per il minore */
     int i, j, k, col, sign;
     long result;
 
@@ -24,8 +15,8 @@ long det(int A[N][N], int n) {
     result = 0;
     sign = 1;
 
-    for(col = 0; col < n; col++){ /* parto dalla prima colonna  */
-        for(i = 1; i < n; i++) { /*  parto dalla seconda colonna */
+    for(col = 0; col < n; col++){
+        for(i = 1; i < n; i++) { 
             k = 0;
             for(j = 0; j < n; j++) {
                 if(j != col) {
